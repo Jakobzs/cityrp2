@@ -24,7 +24,7 @@ jobs:
 
       - name: cd Steam
         run: |
-            cd ~/Steam/steamapps/common/GarrysModDS/srcds_run
+            cd ~/Steam/steamapps/common/GarrysModDS
             ls
 
       - name: lsss
