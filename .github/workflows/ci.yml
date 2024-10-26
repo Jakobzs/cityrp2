@@ -39,6 +39,12 @@ jobs:
       - name: Find srcds_run
         run: locate -i srcds_run
 
+      - name: cd steam
+        run: cd ~/.steam
+
+      - name: cd Steam
+        run: cd ~/Steam
+
 #      - name: Configure server
 #        run: |
 #          # Place your server configuration files here, or modify them as needed.
