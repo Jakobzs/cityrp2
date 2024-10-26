@@ -33,6 +33,12 @@ jobs:
       - name: Print files
         run: echo "${{ steps.ff.outputs.files }}"
 
+      - name: Find srcds_run
+        run: find / -iname 'srcds_run'
+
+      - name: Find srcds_run
+        run: locate -i srcds_run
+
 #      - name: Configure server
 #        run: |
 #          # Place your server configuration files here, or modify them as needed.
