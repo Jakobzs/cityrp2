@@ -23,7 +23,9 @@ jobs:
         run: ls steamcmd/linux32
 
       - name: cd Steam
-        run: cd ~/Steam
+        run: |
+            cd ~/Steam/steamapps/common/GarrysModDS/srcds_run
+            ls
 
       - name: lsss
         run: ls
