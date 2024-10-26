@@ -25,7 +25,7 @@ jobs:
       - name: cd Steam
         run: |
             cd ~/Steam/steamapps/common/GarrysModDS
-            ls
+            ./srcds_run -game garrysmod +maxplayers 16 +map gm_construct
 
       - name: lsss
         run: ls
