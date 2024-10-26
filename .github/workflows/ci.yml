@@ -10,11 +10,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup steamcmd
+      - id: setup-steamcmd
         uses: CyberAndrii/setup-steamcmd@v1
       
       - name: Install GMod Server
         run: steamcmd +login anonymous +app_update 4020 validate +quit
+
+      - name: Go to gmod server directory
+        run: cd ${{ steps.setup-steamcmd.outputs.directory }}
+
+      - name: Ls the directory
+        run: ls
 
       - name: Configure server
         run: |
