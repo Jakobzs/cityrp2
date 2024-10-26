@@ -20,7 +20,7 @@ jobs:
         run: cd ${{ steps.setup-steamcmd.outputs.directory }}
 
       - name: Ls the directory
-        run: ls steamcmd
+        run: ls steamcmd/linux32
 
 #      - name: Configure server
 #        run: |
