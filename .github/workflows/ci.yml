@@ -22,16 +22,11 @@ jobs:
       - name: Ls the directory
         run: ls steamcmd/linux32
 
-      - name: Find files matching "*.rs" or "*.md"
-        uses: jeertmans/filesfinder@latest
-        id: ff # Any id, to be used later to reference to files output
-        with:
-            # Only argument, a single string, to be passed as arguments to ff.
-            # See `ff --help` for more help.
-            # Default: "*"
-            args: "srcds_run"
-      - name: Print files
-        run: echo "${{ steps.ff.outputs.files }}"
+      - name: cd Steam
+        run: cd ~/Steam
+
+      - name: lsss
+        run: ls
 
       - name: Find srcds_run
         run: find / -iname 'srcds_run'
@@ -41,9 +36,6 @@ jobs:
 
       - name: cd steam
         run: cd ~/.steam
-
-      - name: cd Steam
-        run: cd ~/Steam
 
 #      - name: Configure server
 #        run: |
